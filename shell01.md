@@ -9,7 +9,7 @@
   - <https://linuxize.com/post/how-to-list-groups-in-linux/>
   
   - 
-    ```
+    ```shell
     groups
     id -nG
     ```
@@ -20,20 +20,28 @@
   - <http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/sed>
 
   - 
-    ```
+    ```shell
     sed 's/찾을텍스트/바꿀텍스트/g' 파일명
     ```
   - 이 때 g를 입력하지 않으면 처음 찾은 문자에만 적용 되고 나머지 문자에는 적용 안 됨.
   
   - 위 명령어를 적용하면
   
-    ```
+    ```Shell
     sed 's/ /,/g' 파일명
     ```
     이 된다. 이 때 sed의 인풋 즉 파일명을 그룹이름 목록으로 넣어주기 위해 pipe( | )를 사용한다.
+    
+    그럼
+    ```Shell
+    id -nG $FT_USER | sed 's/ /,/g'
+    ```
+    가 됨.
 
 *  | (pipe)와 > (redirect)의 차이점.
   
     - pipe는 결과를 다른 프로그램의 input으로 전달할 때 사용. 그니까 | 오른쪽에 명령어가 보통 옴.
     
     - redirect는 결과를 파일에 남기는 것. > 오른쪽에는 파일이 옴. .txt 같은 거
+
+## ex02
