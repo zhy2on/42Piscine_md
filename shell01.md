@@ -31,18 +31,17 @@
     sed 's/ /,/g' 파일명
     ```
     이 된다. 이 때 sed의 인풋 즉 파일명을 그룹이름 목록으로 넣어주기 위해 pipe( | )를 사용한다.
-    
-***
-result
-```Shell
-id -nG $FT_USER | sed 's/ /,/g'
-```
-***
 
 *  | (pipe)와 > (redirect)의 차이점.
   
     - pipe는 결과를 다른 프로그램의 input으로 전달할 때 사용. 그니까 | 오른쪽에 명령어가 보통 옴.
     
     - redirect는 결과를 파일에 남기는 것. > 오른쪽에는 파일이 옴. .txt 같은 거
+
+***
+```Shell
+id -nG $FT_USER | sed 's/ /,/g'
+```
+***
 
 ## ex02
