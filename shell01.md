@@ -41,9 +41,9 @@
   - <https://soooprmx.com/archives/6764>
   - -name pattern: 파일의 베이스 이름(디렉토리 이름 뗀)이 주어진 패턴과 매치하는지 본다.
   - 특정 이름 검색 ex) .sh로 끝나는 파일 ``` "*.sh" ``` 
- ```shell
- find . -name "*.sh"
- ```
+  ```shell
+  find . -name "*.sh"
+  ```
  
 * sed
   - . (dot) 같은 특수문자는 역슬래쉬를 붙여야 올바르게 인식된다.
