@@ -1,4 +1,4 @@
-# Shell 01 정리
+# Shell01 정리
 ## ex01
 
 * 우선 FT_USER 환경변수를 설정해줘야 한다. 방법은 ```export 변수명=해당내용```
@@ -36,8 +36,24 @@
     - pipe는 결과를 다른 프로그램의 input으로 전달할 때 사용. 그니까 | 오른쪽에 명령어가 보통 옴.
     
     - redirect는 결과를 파일에 남기는 것. > 오른쪽에는 파일이 옴. .txt 같은 거
+  
   ```shell
   id -nG $FT_USER | sed 's/ /,/g'
   ```
   
 ## ex02
+
+* <https://recipes4dev.tistory.com/156>
+  
+* find명령어
+  
+  - 해당 디렉토리 및 하위 디렉토리에서 검색 ``` find . -name ```
+  
+  - 특정 이름 검색 ex) .sh로 끝나는 파일 ``` "*.sh" ``` 
+
+ ```shell
+ find . -name "*.sh"
+ ```
+  
+  
+  
