@@ -1,11 +1,9 @@
 # Shell 01 정리
 ## ex01
 
-***
 ```Shell
 id -nG $FT_USER | sed 's/ /,/g'
 ```
-***
 
 * 우선 FT_USER 환경변수를 설정해줘야 한다. 방법은 ```export 변수명=해당내용```
   
