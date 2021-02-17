@@ -51,7 +51,7 @@
 
 * basename
   - <https://steemit.com/bash/@pelican7/bash-basename>
-  - basename은 기본적으로 디렉토리 빼고 확장자 포함 파일명을 보여줌. 여기서 확장자도 빼고 싶으면 ```basename -s ".*" 해주면 됨.
+  - basename은 기본적으로 디렉토리 빼고 확장자 포함 파일명을 보여줌. 여기서 확장자도 빼고 싶으면 ``` basename -s ".*" ``` 해주면 됨.
 
 * exec / execdir
   - exec는 starting directory에서, execdir은 matching target이 있는 directory에서 command line실행
