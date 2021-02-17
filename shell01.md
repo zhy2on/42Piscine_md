@@ -42,10 +42,10 @@
   ```
   
 ## ex02
-
-* <https://recipes4dev.tistory.com/156>
   
 * find명령어
+
+  - <https://recipes4dev.tistory.com/156>
   
   - 해당 디렉토리 및 하위 디렉토리에서 검색 ``` find . -name ```
   
