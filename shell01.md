@@ -32,11 +32,12 @@
     ```
     이 된다. 이 때 sed의 인풋 즉 파일명을 그룹이름 목록으로 넣어주기 위해 pipe( | )를 사용한다.
     
-    그럼
-    ```Shell
-    id -nG $FT_USER | sed 's/ /,/g'
-    ```
-    가 됨.
+***
+result
+```Shell
+id -nG $FT_USER | sed 's/ /,/g'
+```
+***
 
 *  | (pipe)와 > (redirect)의 차이점.
   
