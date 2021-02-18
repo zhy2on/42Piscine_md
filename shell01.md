@@ -99,9 +99,10 @@ ifconfig | grep 'ether ' | sed 's/	ether //g' | sed 's/ //g'
   \”\\\?$\*\’MaRViN\’\*$\?\\\”
   ```
 * 개행문자 제거
-  - ```sed 's/^M//g'``` 해준 다음 redirect로 해당 파일에 다시 덧씌우기
+  - <https://serverfault.com/questions/307370/in-linux-why-does-an-empty-file-have-a-size-of-0-but-a-text-file-with-any-cont>
+  - ```$ echo -n 'a' > /tmp/test_text```
 
 ```shell
 vi \”\\\?$\*\’MaRViN\’\*$\?\\\”
-sed's/^M//g' \”\\\?$\*\’MaRViN\’\*$\?\\\” > \”\\\?$\*\’MaRViN\’\*$\?\\\”
+echo -n '42' > \”\\\?$\*\’MaRViN\’\*$\?\\\”
 ```
