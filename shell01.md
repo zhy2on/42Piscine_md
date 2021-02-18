@@ -94,7 +94,7 @@ ifconfig | grep 'ether ' | sed 's/	ether //g' | sed 's/ //g'
 
 * file name이 될 수 없는 특수 문자
   - ```\ / : * ? " ' < > |```
-  - 해당 이름으로 파일을 만들기 위해 백슬래쉬를 사용. -->파일 접근할 때도 백슬래쉬 써줘야 한다;; 개귀찮 꼭 따로 적어두기 터미널 clear 웬만함 하지 말고
+  - 해당 이름으로 파일을 만들기 위해 백슬래쉬를 사용. -->파일 접근할 때도 백슬래쉬 써줘야 한다;; 개귀찮 따로 적어두기
   ```shell
   \”\\\?$\*\’MaRViN\’\*$\?\\\”
   ```
@@ -106,3 +106,10 @@ ifconfig | grep 'ether ' | sed 's/	ether //g' | sed 's/ //g'
 vi \”\\\?$\*\’MaRViN\’\*$\?\\\”
 echo -n '42' > \”\\\?$\*\’MaRViN\’\*$\?\\\”
 ```
+
+## ex06
+
+* awk
+  - <https://unix.stackexchange.com/questions/26723/print-odd-numbered-lines-print-even-numbered-lines>
+  - 특정 부분만 출력할 때 사용.
+  - 
