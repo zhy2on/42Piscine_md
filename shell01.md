@@ -98,3 +98,10 @@ ifconfig | grep 'ether ' | sed 's/	ether //g' | sed 's/ //g'
   ```shell
   \”\\\?$\*\’MaRViN\’\*$\?\\\”
   ```
+* 개행문자 제거
+  - ```sed 's/^M//g'``` 해준 다음 redirect로 해당 파일에 다시 덧씌우기
+
+```shell
+vi \”\\\?$\*\’MaRViN\’\*$\?\\\”
+sed's/^M//g' \”\\\?$\*\’MaRViN\’\*$\?\\\” > \”\\\?$\*\’MaRViN\’\*$\?\\\”
+```
