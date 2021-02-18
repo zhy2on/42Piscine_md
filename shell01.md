@@ -122,10 +122,48 @@ ls -l | awk 'NR % 2 == 0'
 
 ## ex07
 
+* etc/passwd
+  - <https://webdir.tistory.com/129>
+  - <https://harryp.tistory.com/878>
+  - 리눅스에서는 파일로 사용자 계정을 관리 합니다. 
+  - /etc/passwd 파일을 통해 계정을 관리하고, /etc/shadow 파일을 통해 패스워드를 관리하게 됩니다.
+
 * grep -v
   - 해당하는 부분 '빼고' 출력
-```grep -v '^#'```
+  ```grep -v '^#'```
 
-* sed -n "_start_, _end_ p"
-  - 특정 범위 출력
-  - 이 때, 파일 끝을 표현하기 위해선 \$를 사용
+* awk pattern filename
+  ```awk 'NR % 2 == 0'```
+  
+* 로그인만 출력
+  ```sed 's/:.*//'```
+  
+* rev
+  - <https://webdir.tistory.com/143>
+  - 한 행을 역순 출력
+  ```rev```
+  
+* sort -r
+  - 역순 정렬
+  ```sort -r```
+ 
+* sed -n "$환경변수, $환경변수p"
+  - 위에서 설명한 것과 같음.
+  ```sed -n "${FT_LINE1},${FT_LINE2}p"```
+* tr
+  - sed와 비슷한데 문자열 지원 x
+  - sed에서 개행문자 사용이 어려우니 tr로 '\n'먼저 바꾸고 진행
+  ```tr '\n' ','```
+  
+* sed 's/,/, /g'
+  - ', '으로 구분 되게 바꾸기
+
+* sed 's/, $/./'
+  - 마지막 ', '를 '.'으로 바꾸기
+
+* tr -d '\n'
+  - 개행문자 제거
+```shell
+cat /etc/passwd | grep -v '^#' | awk 'NR % 2 == 0' | sed 's/:.*//' | rev | sort -r | sed -n "${FT_LINE1},${FT_LINE2}p" | tr '\n' ',' | sed 's/,/, /g' | sed 's/, $/./' | tr -d '\n'
+```
+
