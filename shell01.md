@@ -179,4 +179,11 @@ cat /etc/passwd | grep -v '^#' | awk 'NR % 2 == 0' | sed 's/:.*//' | rev | sort 
   export FT_NBR2=dcrcmcmooododmrrrmorcmcrmomo
   --> Segmantation fault
   ```
+  
+* tr
+  - 문자 치환
+  ``` tr "'"'\\"?!mrdoc' '0123401234' \ ```
 
+* xargc
+  - <http://www.dreamy.pe.kr/zbxe/CodeClip/164220>
+  - 파이프 이전의 내용을 인자로 받아 명령어를 실행하는 구조
