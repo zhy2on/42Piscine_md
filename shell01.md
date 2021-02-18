@@ -80,4 +80,10 @@ find . -name "*.sh" -execdir basename -s ".sh" {} +
 ls -Rl | grep "^d\|-" | wc -l
 ```
 
+## ex04
 
+* MAC Address
+  - MAC 주소는 "Media Access Control"의 약자로 네트워크 카드 하드웨어에 부여되는 고유한 물리적 주소이다
+
+* ifconfig
+  - -a : 모든 네트워크 정보를 볼 수 있음 (근데 이거 안 해도 잘 나옴)
