@@ -182,8 +182,28 @@ cat /etc/passwd | grep -v '^#' | awk 'NR % 2 == 0' | sed 's/:.*//' | rev | sort 
   
 * tr
   - 문자 치환
-  ``` tr "'"'\\"?!mrdoc' '0123401234' \ ```
+  ``` tr "\'\\\\\"?\!" "01234"| tr "mrdoc" "01234" ```
 
 * xargc
   - <http://www.dreamy.pe.kr/zbxe/CodeClip/164220>
   - 파이프 이전의 내용을 인자로 받아 명령어를 실행하는 구조
+
+* ibase, obase
+  - ibase는 인풋을 해당 진수로 변경
+  - obase는 아웃풋을 해당 진수로 변경
+  ```xargs echo "ibase=5; obase=23;"```
+  - 주의! 
+  - <https://stackoverflow.com/questions/9889839/bc-and-its-ibase-obase-options>
+  - ibase를 하는 순간 ibase로 진수가 변환 됨. ibase를 먼저 하고 obase를 쓰려면 obase를 ibase 진수에 맞춰서 적어줘야 됨.
+  - ex) ibase = 5; obase = 23; -->ibase를 5진수로 한 순간 obase도 5진수로 읽음. 그러므로 여기서 obase = 23; 은 13진수를 의미함.
+  - 해결: obase를 먼저 쓰면 됨.
+  ``` xargs echo "obase=13; ibase=5;" ```
+
+* bc
+  - 계산
+
+* tr 치환
+  ``` tr "0123456789ABC" "gtaio luSnemf" ```
+```shell
+echo $FT_NBR1 + $FT_NBR2 | tr "\'\\\\\"?\!" "01234"| tr "mrdoc" "01234" | xargs echo "obase=13; ibase=5;" | bc | tr "0123456789ABC" "gtaio luSnemf"
+```
