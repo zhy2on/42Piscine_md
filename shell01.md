@@ -167,3 +167,16 @@ ls -l | awk 'NR % 2 == 0'
 cat /etc/passwd | grep -v '^#' | awk 'NR % 2 == 0' | sed 's/:.*//' | rev | sort -r | sed -n "${FT_LINE1},${FT_LINE2}p" | tr '\n' ',' | sed 's/,/, /g' | sed 's/, $/./' | tr -d '\n'
 ```
 
+##ex08
+
+* 환경변수 세팅
+  ```shell
+  export FT_NBR1=\\\'\?\"\\\"\'\\
+  export FT_NBR2=rcrdmddd
+  --> Sault
+  
+  export FT_NBR1=\\\"\\\"\!\\\"\\\"\!\\\"\\\"\!\\\"\\\"\!\\\"\\\"\!\\\"\\\"
+  export FT_NBR2=dcrcmcmooododmrrrmorcmcrmomo
+  --> Segmantation fault
+  ```
+
