@@ -61,4 +61,23 @@
 ```shell
 find . -name "*.sh" -execdir basename -s ".sh" {} +
 ```
-  
+
+## ex03
+
+* ls - Rl
+  - 하위 디렉토리까지 포함해서 출력
+
+* grep
+  - <https://recipes4dev.tistory.com/157>
+  - ```grep ^ ``` 문자열 라인의 처음 
+  - ```grep "a\|b" ``` a 또는 b가 포함된 라인 검색. 파이프( | )를 이용하기 위해 앞에 백슬래쉬를 붙여준다.
+
+* wc -l
+  - wc == word count
+  - 사용자가 지정한 파일의 행, 단어, 문자수를 세는 프로그램. 
+  - -l 옵션은 행단위로 세는 것.
+```shell
+ls -Rl | grep "^d\|-" | wc -l
+```
+
+
