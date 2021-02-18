@@ -87,3 +87,6 @@ ls -Rl | grep "^d\|-" | wc -l
 
 * ifconfig
   - -a : 모든 네트워크 정보를 볼 수 있음 (근데 이거 안 해도 잘 나옴)
+```shell
+ifconfig | grep 'ether ' | sed 's/	ether //g' | sed 's/ //g'
+```
