@@ -56,7 +56,7 @@
 * exec / execdir
   - exec는 starting directory에서, execdir은 matching target이 있는 directory에서 command line실행
   - find와 같이 사용할 때 {}가 의미하는 바는, find에서 찾아진 파일명들이 쫙 들어가 있는 거.
-  - \+ 또는 ; 로 종료돼야 하는데, basename에서 ;를 인식시켜주기 위해 \;로 쓰는 것 같음. 그냥 + 써주기
+  - \+ 또는 ; 로 종료돼야 하는데, basename에서 ;를 인식시켜주기 위해 \\;로 쓰는 것 같음. 그냥 + 써주기
 
 ```shell
 find . -name "*.sh" -execdir basename -s ".sh" {} +
