@@ -33,6 +33,13 @@
   id -nG $FT_USER | sed 's/ /,/g'
   ```
   
+***
+수정
+ ```shell
+  groups $FT_USER | sed 's/ /,/g' | tr -d '\n'
+```
+***
+  
 ## ex02
   
 * find
@@ -80,6 +87,13 @@ find . -name "*.sh" -execdir basename -s ".sh" {} +
 ls -Rl | grep "^d\|-" | wc -l
 ```
 
+***
+수정
+```shell
+find . \( -type f -o -type d \) | wc -l | sed 's/       //'
+```
+***
+
 ## ex04
 
 * MAC Address
@@ -107,6 +121,15 @@ vi \”\\\?$\*\’MaRViN\’\*$\?\\\”
 echo -n '42' > \”\\\?$\*\’MaRViN\’\*$\?\\\”
 ```
 
+***
+수정
+ㅅㅂ 큰따옴표 잘못 들어감;
+```shell
+vi \"\\\?$\*\'MaRViN\'\*$\?\\\"
+echo -n '42' > \"\\\?$\*\'MaRViN\'\*$\?\\\"
+```
+***
+
 ## ex06
 
 * awk
@@ -119,6 +142,14 @@ echo -n '42' > \”\\\?$\*\’MaRViN\’\*$\?\\\”
 ```shell
 ls -l | awk 'NR % 2 == 0'
 ```
+
+***
+수정
+하.. total부터가 시작임. 홀수행은 나머지 1 맞음
+```shell
+ls -l | awk 'NR % 2 == 1'
+```
+***
 
 ## ex07
 
