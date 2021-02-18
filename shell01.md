@@ -111,5 +111,13 @@ echo -n '42' > \”\\\?$\*\’MaRViN\’\*$\?\\\”
 
 * awk
   - <https://unix.stackexchange.com/questions/26723/print-odd-numbered-lines-print-even-numbered-lines>
-  - 특정 부분만 출력할 때 사용.
-  - 
+  - 특정 부분만 출력할 때 사용. 패턴 탐색과 처리를 위한 명령어.
+  - <http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/awk>
+  ```
+  $ awk 'pattern' filename 조건
+  ```
+```shell
+ls -l | awk 'NR % 2 == 0'
+```
+
+## ex07
