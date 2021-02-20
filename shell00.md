@@ -56,4 +56,12 @@
 
 ## ex04 - midLS (KO -> 
 
-* 
+* ls -mptU
+  - ```ls``` 디렉토리 내용 확인
+  - ```-m``` 파일명을 쉼표로 구분해준다
+  - ```-p``` 파일 형태를 붙여서 보여준다. 디렉토리는 슬래시( / )가 붙는다
+  - ```-t``` 최종수정일이 가장 최근인 것대로 정렬
+  - ```-U``` 디스크의 순서대로 파일을 나열한다  do not sort; list entries in directory order 이게 뭔말인지 정확히 모르겠어서 찾아봤는데, 운영체제에 따라 달라지는듯.. 일단 mac에선 이 옵션을 추가하는 거랑 추가 안 하는 거랑 차이가 없게 나옴. 근데 우분투에선 값이 달라짐
+  - <https://unix.stackexchange.com/questions/13451/what-is-the-directory-order-of-files-in-a-directory-used-by-ls-u>
+
+## ex05 - 
