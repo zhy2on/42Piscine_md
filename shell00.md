@@ -23,9 +23,16 @@ Z
 
 ## ex02 - Oh yeah, mooore... (KO ->
 
-* 심볼릭 링크
+* 링크 파일
   - 윈도우에서 바로가기와 같은 역할.
-  - 링크를 연결하여 원본 파일을 직접 사용하는 것과 같은 효과를 내는 링크
+  - 하드링크와 심볼릭 링크가 있음.
+  
+  ```shell
+  ln -s 원본파일 링크파일 (심볼릭링크)
+  ```
+  ```shell
+  ln 원본파일 링크파일 (하드링크)
+  ```
   
 * 심볼릭 링크와 하드링크의 차이
   - <https://koromoon.blogspot.com/2018/05/inode-symbolic-link-hard-link.html>
@@ -34,3 +41,22 @@ Z
   - 심볼릭 링크는 원본 파일의 inode를 가리키는 정보가 있는 파일. 원본 파일 위치에 대한 포인터만 포함 되므로 새로운 inode를 가진 링크파일이 생성됨.
   - 하드 링크는 원본 파일의 inode에 대한 직접적인 포인터. 하드링크에는 새로운 inode 생성이 없음. 
     <img src = "https://t1.daumcdn.net/cfile/tistory/215B143E56B6C9F72A" width = "400">
+  - 하드링크는 원본파일을 삭제해도 계속 사용가능 vs 심볼릭링크는 원본파일을 삭제하면 사용 할 수 없음.
+  - 심볼릭 링크는 파일 유형에 l로 표시되지만, 하드링크는 표시되지 않음.
+
+* touch
+  - 파일의 날짜시간 정보를 변경하는 명령어
+  - ```touch -t yyyymmddhhmm 파일명```으로 사용 가능.
+ 
+## ex03 - Connect me! (OK)
+
+* Kerberos
+  - 클라이언트-서버 구조에서 서버 접근권한에 대한 관리를 위해 대칭키 방식을 이용하여 인증하는 네트워크 인증 암호화 프로토콜
+  - <http://blog.naver.com/PostView.nhn?blogId=hancury&logNo=221775416124&categoryNo=0&parentCategoryNo=10&viewDate=&currentPage=1&postListTopCurrentPage=1&from=search>
+  - ```klist``` 만들어진 티켓목록 확인
+  - ```kinit``` 티켓 생성 ```kinit id```로 해당 아이디 티켓 생성 가능한듯.
+  - ```kdestroy``` 티켓 삭제. 순차로 1개만 삭제
+
+## ex04 - midLS (KO -> 
+
+* 
