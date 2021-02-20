@@ -127,7 +127,7 @@ find . -type f \( -name '#*#' -o -name '#' -o -name '*~' \) -print -delete
   - ```-print``` 삭제된 파일명이 출력 됨. 확인용으로 넣어준 거
   - ```-delete``` find명령어에 포함되어있는 옵션. 찾은 파일들을 삭제시켜 준다.
 
-## ex09 -  Illusions, not tricks, Michael...
+## ex09 -  Illusions, not tricks, Michael... (KO ->
 ```shell
 41 string 42 42 file
 ```
