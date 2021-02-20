@@ -70,7 +70,7 @@
 find . -name "*.sh" -execdir basename -s ".sh" {} +
 ```
 
-## ex03 (KO ->
+## ex03 - count_files (KO ->
 
 * ls - Rl
   - 하위 디렉토리까지 포함해서 출력
@@ -97,7 +97,7 @@ find . \( -type f -o -type d \) | wc -l | sed 's/       //'
 - 현재 디렉토리 및 하위 디렉토리에서 파일 또는 디렉토리 타입을 찾고 행단위로 개수를 세서 출력을 하는데, 공백을 제거하고 출력한다.
 ***
 
-## ex04 (OK)
+## ex04 - MAC(OK)
 
 * MAC Address
   - MAC 주소는 "Media Access Control"의 약자로 네트워크 카드 하드웨어에 부여되는 고유한 물리적 주소이다
@@ -107,7 +107,7 @@ find . \( -type f -o -type d \) | wc -l | sed 's/       //'
 ```shell
 ifconfig | grep 'ether ' | sed 's/	ether //g' | sed 's/ //g'
 ```
-## ex05 (KO ->
+## ex05 - Can you create it ? (KO ->
 
 * file name이 될 수 없는 특수 문자
   - ```\ / : * ? " ' < > |```
@@ -132,7 +132,7 @@ echo -n '42' > \"\\\?$\*\'MaRViN\'\*$\?\\\"
 ```
 ***
 
-## ex06 (KO ->
+## ex06 - Skip (KO ->
 
 * awk
   - <https://unix.stackexchange.com/questions/26723/print-odd-numbered-lines-print-even-numbered-lines>
@@ -152,7 +152,7 @@ ls -l | awk 'NR % 2 == 1'
 ```
 ***
 
-## ex07 (OK)
+## ex07 - r_dwssap (OK)
 
 * etc/passwd
   - <https://webdir.tistory.com/129>
@@ -199,7 +199,7 @@ ls -l | awk 'NR % 2 == 1'
 cat /etc/passwd | grep -v '^#' | awk 'NR % 2 == 0' | sed 's/:.*//' | rev | sort -r | sed -n "${FT_LINE1},${FT_LINE2}p" | tr '\n' ',' | sed 's/,/, /g' | sed 's/, $/./' | tr -d '\n'
 ```
 
-## ex08 (OK)
+## ex08 - add_chelou (OK)
 
 * 환경변수 세팅
   ```shell
