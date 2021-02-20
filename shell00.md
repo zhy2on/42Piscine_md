@@ -79,4 +79,17 @@ git log -5 --format="%H"
   ```
   - 이유: bash 쉘에서 확인해보면 마지막 줄에 줄바꿈이 안 일어나고 공백이 있는 상태로 끝나버리는 걸 볼 수 있다. moulinette에선 bash쉘을 이용하기 때문에 틀렸던 거라고 한다ㅠㅠ
  
-## 
+## ex06 - gitignore (KO ->
+
+```shell
+git ls-files --others --ignored --exclude-standard
+```
+* .gitignore
+  - 프로젝트에 원하지 않는 파일들을 깃에서 제외시킬 수 있는 설정 파일.
+  - .gitignore파일을 생성하고 해당 파일에 제외시킬 이름이나 규칙을 적으면 된다.
+  - 이 때 .gitignore파일은 항상 최상위 폴더에 위치해야 한다.
+  - ```ls-files``` 파일형식만 출력
+  - ```--others``` 트래킹 되지 않은 것들
+  - ```--ignored --exclude-standard``` 그 중에서도 무시된 것들을 출력
+
+## ex07 - diff (KO ->
