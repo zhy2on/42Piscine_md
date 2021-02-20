@@ -126,3 +126,20 @@ find . -type f \( -name '#*#' -o -name '#' -o -name '*~' \) -print -delete
   - <https://itholic.github.io/linux-find-rm/>
   - ```-print``` 삭제된 파일명이 출력 됨. 확인용으로 넣어준 거
   - ```-delete``` find명령어에 포함되어있는 옵션. 찾은 파일들을 삭제시켜 준다.
+
+## ex09 -  Illusions, not tricks, Michael...
+```shell
+41 string 42 42 file
+```
+```shell
+file -m ft_magic * (테스트할 때 실행할 명령어)
+```
+* file명령어
+  - file은 지정된 파일의 종류(타입)을 확인하는 명령어이다. file은 /usr/share/file 디렉토리의 magic 파일을 참조하여 파일종류를 표시해준다.
+  - 이 때 ```file -m 매직파일 테스트할 파일``` 이렇게 입력하면 커스텀한 매직파일 조건에 맞춰 파일 종류를 표시할 수 있다.
+
+* magic file
+  - ```offset / type / test / mesage```로 구성 되어 있음
+  - offset은 검색을 시작할 위치, type은 검색할 test의 데이터형, test는 파일과 비교할 value, mesage는 조건에 일치하는 파일을 찾을 시 나타낼 메세지를 적는다.
+  - 이 때 offset은 0부터 시작이므로, 42번째를 검색하고 싶다면 41을 적어줘야 한다.
+  - type은 string, numeric의 경우 C form으로 적용된다고 한다. 그래서 \n 같은 경우 c와 같이 개행문자를 나타내게 된다.
