@@ -93,7 +93,7 @@ git ls-files --others --ignored --exclude-standard
   - ```--ignored --exclude-standard``` 그 중에서도 무시된 것들을 출력
 
 ## ex07 - diff (KO ->
-```Shell
+```shell
 patch -b a sw.diff
 mv a b
 rm a.origin sw.dirr
@@ -111,3 +111,18 @@ rm a.origin sw.dirr
   - <https://www.thegeekstuff.com/2014/12/patch-command-examples/>
   - ```patch [option] original file patch file```
   - 오리지널 파일을 패치파일로 패치시킴. 이 때 -b 옵션을 통해 원본을 백업해둘 수 있음. "원본파일명.origin" 이라는 백업파일이 생성됨.
+
+## ex08 - clean (KO ->
+```shell
+find . -type f \( -name '#*#' -o -name '#' -o -name '*~' \) -print -delete
+```
+* find
+  - 리눅스에서 파일 및 디렉토리를 검색할 때 사용하는 명령어
+  - ```find .``` 현재 디렉토리 및 하위디렉토리에서 검색
+  - ```-type f``` 파일만 검색
+  - ```\( -name '#*#' -o -name '#' -o -name '*~' \)``` #으로 시작하고 끝나거나 ~로 끝나는 파일 검색. 이 때 \는 괄호를 올바르게 인식시켜주기 위함임
+  
+* find에서 특정 파일 삭제하기
+  - <https://itholic.github.io/linux-find-rm/>
+  - ```-print``` 삭제된 파일명이 출력 됨. 확인용으로 넣어준 거
+  - ```-delete``` find명령어에 포함되어있는 옵션. 찾은 파일들을 삭제시켜 준다.
