@@ -64,4 +64,19 @@
   - ```-U``` 디스크의 순서대로 파일을 나열한다  do not sort; list entries in directory order 이게 뭔말인지 정확히 모르겠어서 찾아봤는데, 운영체제에 따라 달라지는듯.. 일단 mac에선 이 옵션을 추가하는 거랑 추가 안 하는 거랑 차이가 없게 나옴. 근데 우분투에선 값이 달라짐
   - <https://unix.stackexchange.com/questions/13451/what-is-the-directory-order-of-files-in-a-directory-used-by-ls-u>
 
-## ex05 - 
+## ex05 - Git commit (KO ->
+
+```shell
+git log -5 --format="%H"
+```
+* git log
+  - ```-5``` 최근 커밋부터 5개를 출력해라
+  - ```--format="%H"``` 커밋 해시만 출력해라
+ 
+* 실패했던 코드
+  ```shell
+  git log -5 --pretty=format:"%H"
+  ```
+  - 이유: bash 쉘에서 확인해보면 마지막 줄에 줄바꿈이 안 일어나고 공백이 있는 상태로 끝나버리는 걸 볼 수 있다. moulinette에선 bash쉘을 이용하기 때문에 틀렸던 거라고 한다ㅠㅠ
+ 
+## 
