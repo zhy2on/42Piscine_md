@@ -93,7 +93,7 @@ git ls-files --others --ignored --exclude-standard
   - ```--ignored --exclude-standard``` 그 중에서도 무시된 것들을 출력
 
 ## ex07 - diff (KO ->
-```shell
+```Shell
 patch -b a sw.diff
 mv a b
 rm a.origin sw.dirr
