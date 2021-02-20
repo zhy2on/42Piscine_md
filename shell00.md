@@ -1,12 +1,9 @@
 # shell00
 
 ## ex00 - z (OK)
-```shell
-$ vi z
-Z
 
-:q
-```
+* cat
+  - 파일 내용을 그대로 출력해주는 명령어
 
 ## ex01 - testShell00 (OK)
 
