@@ -105,7 +105,7 @@ rm a.origin sw.dirr
   - ```diff file1 file2```하면 file1과 file2의 차이점을 볼 수 있음.
   - < 는 file1 내용, > 는 file2 내용.
   - (file1라인)Special symbols(file2라인) 이런식으로 해당 파일의 무슨무슨 라인이 어떤 차이점이 발견된건지 요약해주고 < , > 로 해당 부분 내용 그대로 출력 해줌.
-  - Special symbols에는 a(add), c(change), d(delete) 등이 있음. 1,2c1,8 이런식으로 표현됨. Special symbols를 기준으로 파일을 나눠서 생각하면 됨. file1의 1/~2 라인이 file2에서 1/~8라인으로 변경됐다는 걸 뜻함.
+  - Special symbols에는 a(add), c(change), d(delete) 등이 있음. 1,2c1,8 이런식으로 표현됨. Special symbols를 기준으로 파일을 나눠서 생각하면 됨. file1의 1~2 라인이 file2에서 1~8라인으로 변경됐다는 걸 뜻함.
 
 * patch
   - <https://www.thegeekstuff.com/2014/12/patch-command-examples/>
