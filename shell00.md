@@ -110,4 +110,4 @@ rm a.origin sw.dirr
 * patch
   - <https://www.thegeekstuff.com/2014/12/patch-command-examples/>
   - ```patch [option] original file patch file```
-  - 오리지널 파일을 패치파일로 패치시킴. 이 때 -b 옵션을 통해 원본을 백업해둘 수 있음. 원본.origin 백업파일이 생성됨.
+  - 오리지널 파일을 패치파일로 패치시킴. 이 때 -b 옵션을 통해 원본을 백업해둘 수 있음. "원본파일명.origin" 이라는 백업파일이 생성됨.
