@@ -1,6 +1,6 @@
 # Shell01 
 
-## ex01 - print_groups (KO ->
+## ex01 - print_groups (KO -> OK)
 
 * 우선 FT_USER 환경변수를 설정해줘야 한다. 방법은 ```export 변수명=해당내용```
   
@@ -70,7 +70,7 @@
 find . -name "*.sh" -execdir basename -s ".sh" {} +
 ```
 
-## ex03 - count_files (KO ->
+## ex03 - count_files (KO -> KO ->
 
 * ls - Rl
   - 하위 디렉토리까지 포함해서 출력
@@ -92,6 +92,10 @@ ls -Rl | grep "^d\|^-" | wc -l
 수정
 ```shell
 find . \( -type f -o -type d \) | wc -l | sed 's/       //'
+
+또 수정
+
+find . \( -type f -o -type d \) | wc -l | sed 's/^ *//'
 ```
 
 - 현재 디렉토리 및 하위 디렉토리에서 파일 또는 디렉토리 타입을 찾고 행단위로 개수를 세서 출력을 하는데, 공백을 제거하고 출력한다.
@@ -132,7 +136,7 @@ echo -n '42' > \"\\\?$\*\'MaRViN\'\*$\?\\\"
 ```
 ***
 
-## ex06 - Skip (KO ->
+## ex06 - Skip (KO -> OK)
 
 * awk
   - <https://unix.stackexchange.com/questions/26723/print-odd-numbered-lines-print-even-numbered-lines>
