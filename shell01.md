@@ -136,9 +136,9 @@ echo -n '42' > \"\\\?$\*\'MaRViN\'\*$\?\\\"
 
 * awk
   - <https://unix.stackexchange.com/questions/26723/print-odd-numbered-lines-print-even-numbered-lines>
-  - 특정 부분만 출력할 때 사용. 패턴 탐색과 처리를 위한 명령어.
+  - 특정 부분만 출력할 때 사용. 패턴 탐색과 처리를 위한 명령어
   - <http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/awk>
-  - NR 변수 == new line 줄별로 조건을 주고 싶을 때 사용
+  - NR 변수 == new line 줄별로 조건을 주고 싶을 때 사용한다.
   ```
   $ awk 'pattern' filename 조건
   ```
@@ -158,8 +158,8 @@ ls -l | awk 'NR % 2 == 1'
 * etc/passwd
   - <https://webdir.tistory.com/129>
   - <https://harryp.tistory.com/878>
-  - 리눅스에서는 파일로 사용자 계정을 관리 합니다. 
-  - /etc/passwd 파일을 통해 계정을 관리하고, /etc/shadow 파일을 통해 패스워드를 관리하게 됩니다.
+  - 리눅스에서는 파일로 사용자 계정을 관리 한다.
+  - /etc/passwd 파일을 통해 계정을 관리하고, /etc/shadow 파일을 통해 패스워드를 관리하게 된다.
 
 * grep -v
   - 해당하는 부분 '빼고' 출력
@@ -181,7 +181,7 @@ ls -l | awk 'NR % 2 == 1'
   ```sort -r```
  
 * sed -n "$환경변수, $환경변수p"
-  - 위에서 설명한 것과 같음.
+  - 위에서 설명한 것과 같음
   ```sed -n "${FT_LINE1},${FT_LINE2}p"```
 * tr
   - sed와 비슷한데 문자열 지원 x
@@ -227,9 +227,9 @@ cat /etc/passwd | grep -v '^#' | awk 'NR % 2 == 0' | sed 's/:.*//' | rev | sort 
   ```xargs echo "ibase=5; obase=23;"```
   - 주의! 
   - <https://stackoverflow.com/questions/9889839/bc-and-its-ibase-obase-options>
-  - ibase를 하는 순간 ibase로 진수가 변환 됨. ibase를 먼저 하고 obase를 쓰려면 obase를 ibase 진수에 맞춰서 적어줘야 됨.
-  - ex) ibase = 5; obase = 23; -->ibase를 5진수로 한 순간 obase도 5진수로 읽음. 그러므로 여기서 obase = 23; 은 13진수를 의미함.
-  - 해결: obase를 먼저 쓰면 됨.
+  - ibase를 하는 순간 ibase로 진수가 변환 됨. ibase를 먼저 하고 obase를 쓰려면 obase를 ibase 진수에 맞춰서 적어줘야 된다.
+  - ex) ibase = 5; obase = 23; -->ibase를 5진수로 한 순간 obase도 5진수로 읽는다. 그러므로 여기서 obase = 23; 은 13진수를 의미한다.
+  - 해결: obase를 먼저 쓰면 됨
   ``` xargs echo "obase=13; ibase=5;" ```
 
 * bc
