@@ -9,4 +9,4 @@
 * c05 - 100 md fin
 * c06 - 100 md fin
 * c07 - 100 md fin
-* c08 - 
+* c08 - 100 md fin
